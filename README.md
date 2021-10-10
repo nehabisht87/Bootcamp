@@ -1,4 +1,4 @@
-# Bootcamp
+# COUNTER
 Create a Counter Application which Increments Counter on Click of a Button.
 
 Parent Component will have state for the counter and a Button to update Counter Value
