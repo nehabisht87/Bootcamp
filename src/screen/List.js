@@ -1,0 +1,107 @@
+import React, {useState, useEffect} from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  FlatList,
+  Image,
+} from 'react-native';
+
+const FlatlistPagination = () => {
+  const [data, setData] = useState({pageNo: 1, listData: []});
+  const [refreshing, setRefreshing] = useState(false);
+
+  const listItem = ({item}) => {
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.cardContainer}>
+          <Image style={styles.avatar} source={{uri: item.avatar}} />
+          <Text style={styles.name}>
+            {item.first_name} {item.last_name}
+          </Text>
+        </View>
+        <Text style={styles.email}>{item.email}</Text>
+      </SafeAreaView>
+    );
+  };
+
+  const getData = (pageNo = 1, refreshing = false) => {
+    setRefreshing(refreshing);
+    fetch(`https://reqres.in/api/users?page=${pageNo}`, {
+      method: 'GET',
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        setTimeout(() => {
+          setRefreshing(false);
+        }, 10000);
+
+        setData({
+          pageNo,
+          listData:
+            pageNo === 1 ? result.data : [...data.listData, ...result.data],
+        });
+      })
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return (
+    <SafeAreaView style={styles.cardListContainer}>
+      <FlatList
+        style={styles.card}
+        keyExtractor={(item, index) => index.toString()}
+        data={data.listData}
+        renderItem={listItem}
+        refreshing={refreshing}
+        onRefresh={() => getData(1, true)}
+        onEndReached={() => {
+          getData(data.pageNo + 1);
+        }}
+      />
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  cardListContainer: {
+    flex: 1,
+  },
+  container: {
+    width: '100%',
+    padding: 80,
+    borderWidth: 20,
+    borderColor: '#fff',
+    borderRadius: 30,
+    backgroundColor: 'lightgreen',
+    height: 110,
+  },
+  cardContainer: {
+    flexDirection: 'row',
+  },
+  card: {
+    backgroundColor: '#fff',
+  },
+  avatar: {
+    width: 70,
+    height: 70,
+    borderRadius: 50,
+  },
+  name: {
+    fontSize: 20,
+    color: '#FFFFFF',
+    paddingHorizontal: 50,
+  },
+  email: {
+    color: '#000',
+    marginLeft: 90,
+    width: '100%',
+    marginTop: -50,
+    fontSize: 14,
+  },
+});
+export default FlatlistPagination;
