@@ -53,7 +53,7 @@ const ClothingItems = () => {
               <Text style={styles.newText}>NEW</Text>
               <Image
                 source={require('../assets/wishlistItem.png')}
-                style={styles.heart}
+                style={styles.wishlistItem}
               />
             </>
           </ImageBackground>
@@ -89,14 +89,13 @@ const styles = StyleSheet.create({
     padding: 5,
     color: '#fff',
   },
-  heart: {
+  wishlistItem: {
     marginTop: 5,
     height: 30,
     width: 30,
     marginLeft: 110,
-
     backgroundColor: '#f2f2f2',
-    borderRadius: 10,
+    borderRadius: 15,
   },
   name: {
     fontWeight: 'bold',
