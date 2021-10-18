@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     marginBottom: 18,
   },
   buttonTick: {
-    width: '95%',
+    width: '85%',
     marginHorizontal: 20,
   },
 });
