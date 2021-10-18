@@ -18,7 +18,8 @@ const FlatlistPagination = () => {
         <View style={styles.cardContainer}>
           <Image style={styles.avatar} source={{uri: item.avatar}} />
           <Text style={styles.name}>
-            {item.first_name} {item.last_name}
+            {item.first_name}
+            {item.last_name}
           </Text>
         </View>
         <Text style={styles.email}>{item.email}</Text>
@@ -51,7 +52,7 @@ const FlatlistPagination = () => {
   }, []);
 
   return (
-    <SafeAreaView style={styles.cardListContainer}>
+    <SafeAreaView style={{flex: 1}}>
       <FlatList
         style={styles.card}
         keyExtractor={(item, index) => index.toString()}
@@ -68,9 +69,6 @@ const FlatlistPagination = () => {
 };
 
 const styles = StyleSheet.create({
-  cardListContainer: {
-    flex: 1,
-  },
   container: {
     width: '100%',
     padding: 80,
@@ -78,7 +76,6 @@ const styles = StyleSheet.create({
     borderColor: '#fff',
     borderRadius: 30,
     backgroundColor: 'lightgreen',
-    height: 110,
   },
   cardContainer: {
     flexDirection: 'row',
@@ -87,9 +84,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   avatar: {
-    width: 70,
-    height: 70,
+    width: 100,
+    height: 100,
     borderRadius: 50,
+    marginLeft: -50,
   },
   name: {
     fontSize: 20,
@@ -104,4 +102,5 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 });
+
 export default FlatlistPagination;
