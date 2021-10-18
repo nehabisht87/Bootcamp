@@ -9,7 +9,9 @@ const Detail = ({navigation, route}) => {
       <Text title="Hi" />
       <Button
         title="Go Back to Home"
-        onPress={() => navigation.navigate('Home')}
+        onPress={() =>
+          navigation.navigate('Home', {headerTitle: 'DetailScreen'})
+        }
       />
     </View>
   );
