@@ -6,6 +6,7 @@
 - On Details Screen, there will be two TextInputs for body and title, which will be prepopulated with the data from passed object.
 - Create an action to update an item inside of the data array which has been stored inside of the redux store.
 - The changes should reflect on the Home Screen List item, which has been updated.
+
 ![Screenshot 2021-10-30 at 4 01 43 PM](https://user-images.githubusercontent.com/65220903/139593400-02e9a17a-df7f-4ff6-8e92-691356ea9c0c.png)
 ![Screenshot 2021-10-30 at 4 03 12 PM](https://user-images.githubusercontent.com/65220903/139593404-5bb0e1f8-bb0b-4cf8-94a8-56d21c1f6e5a.png)
 ![Screenshot 2021-10-30 at 4 03 23 PM](https://user-images.githubusercontent.com/65220903/139593408-ffe73dfb-b153-4891-b431-21920dc475ca.png)
