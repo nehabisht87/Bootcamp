@@ -1,6 +1,6 @@
 # MobX state management
 1. Make two screens (Use Stack Navigator for Navigation)
-    - Notes List Screen (Where all the Notes added will be displayed)
+    - Simple Note Maker Screen (Where all the Notes added will be displayed)
     - Add/Edit Notes Screen (Where user will add a new note or edit already added notes)
 2. Use Mobx for state management
 3. By clicking add notes user will be able to add a new note and that note will be displayed on the Notes List Screen
