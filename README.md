@@ -7,11 +7,11 @@
 4. By Pressing any note on Notes List screen user will be able to edit and update that note on Add/Edit Note Screen
 5. By Long Pressing any note user will get alert to delete that particular not
 
-![Screenshot 2021-11-10 at 1 12 04 PM](https://user-images.githubusercontent.com/65220903/141072738-a414cbbf-00c6-4c0e-9aae-f791898216d9.png)
-![Screenshot 2021-11-10 at 1 15 01 PM](https://user-images.githubusercontent.com/65220903/141072764-cf760674-de42-466e-957e-5737d8231356.png)
-![Screenshot 2021-11-10 at 1 15 06 PM](https://user-images.githubusercontent.com/65220903/141072802-e7989c93-050d-4bf5-8412-426f6b0ffa39.png)
+![Screenshot![Screenshot 2021-11-11 at 5 33 06 PM](https://user-images.githubusercontent.com/65220903/141295488-e98a2a11-3507-4ed9-b43a-246591ac6a5b.png)
+![Screenshot 2021-11-11 at 5 33 06 PM](https://user-images.githubusercontent.com/65220903/141295581-230715d8-998d-40f7-9761-761525ec08ec.png)
+![Screenshot 2021-11-11 at 5 33 14 PM](https://user-images.githubusercontent.com/65220903/141295547-84976600-3765-4ffe-873b-9503e8ea9fef.png)
 
 
 ![Screenshot 2021-11-10 at 1 17 08 PM](https://user-images.githubusercontent.com/65220903/141072843-edd8c546-0ac2-4c18-83f6-36211fd21919.png)
-![Screenshot 2021-11-10 at 1 17 29 PM](https://user-images.githubusercontent.com/65220903/141072864-0b4ca2b9-ec42-4193-b606-536e276fe31c.png)
+![Screenshot 2021-11-11 at 5 29 54 PM](https://user-images.githubusercontent.com/65220903/141295734-e984b596-f051-4019-a093-5d404f02355f.png)
 ![Screenshot 2021-11-10 at 1 17 36 PM](https://user-images.githubusercontent.com/65220903/141072924-d4cd0660-dcb5-4a89-b3d6-61fc0ae044bc.png)
