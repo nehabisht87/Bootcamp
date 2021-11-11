@@ -36,9 +36,8 @@ export default class Note extends Component {
             <View style={styles.container}>
                 <TextInput style={styles.textInputTitle} placeholder="Enter Title" value={this.state.title} onChangeText={(text) => this.changeTitle(text)} />
                 <TextInput style={styles.textInputDesc} placeholder="Enter Description" value={this.state.description} onChangeText={(text) => this.changeDesc(text)} />
-                <TouchableOpacity onPress={() => this.saveData(this.state.title, this.state.description)}>
-                    {/* <Image source={require('../assets/check.png')} style={{ height: 40, width: 40, alignSelf: 'flex-end', position: 'absolute' }} /> */}
-                    <Text>Submit</Text>
+                <TouchableOpacity style={{alignSelf: 'flex-end', position: 'absolute', bottom: 20 }} onPress={() => this.saveData(this.state.title, this.state.description)}>
+                    <Image source={require('../assets/check.png')} style={{ height: 40, width: 40}} />                
                 </TouchableOpacity>
             </View>
         )
