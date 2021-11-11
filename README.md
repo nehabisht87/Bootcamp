@@ -14,4 +14,4 @@
 
 ![Screenshot 2021-11-10 at 1 17 08 PM](https://user-images.githubusercontent.com/65220903/141072843-edd8c546-0ac2-4c18-83f6-36211fd21919.png)
 ![Screenshot 2021-11-11 at 5 29 54 PM](https://user-images.githubusercontent.com/65220903/141295734-e984b596-f051-4019-a093-5d404f02355f.png)
-![Screenshot 2021-11-10 at 1 17 36 PM](https://user-images.githubusercontent.com/65220903/141072924-d4cd0660-dcb5-4a89-b3d6-61fc0ae044bc.png)
+
