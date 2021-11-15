@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Videoplayer from './src/Videoplayer';
 import Audioplayer from './src/Audioplayer';
-import Location from './src/Location';
+// import Location from './src/Location';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,27 +18,30 @@ function App() {
         options={({navigation}) => ({
           headerRight: () => (
             <Button
-              title={'Go to Location'}
-              onPress={() => navigation.navigate('Location')
-              }
-            />
-          ),
-        })}   
-        />
-        <Stack.Screen 
-        name="Location" 
-        component={Location}
-        options={({navigation}) => ({
-          headerRight: () => (
-            <Button
               title={'Go to Audioplayer'}
               onPress={() => navigation.navigate('Audioplayer')
               }
             />
           ),
-        })}    
+        })}   
         />
-        <Stack.Screen name="Audioplayer" component={Audioplayer} />
+         <Stack.Screen name="Audioplayer"
+          component={Audioplayer}
+          // options={({navigation}) => ({
+          //   headerRight: () => (
+          //     <Button
+          //       title={'Go to Location'}
+          //       onPress={() => navigation.navigate('Location')
+          //       }
+          //     />
+          //   ),
+          // })}     
+          />
+        {/* <Stack.Screen 
+        name="Location" 
+        component={Location}
+        /> */}
+       
       </Stack.Navigator>
     </NavigationContainer>
   );
