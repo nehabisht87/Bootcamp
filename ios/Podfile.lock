@@ -211,9 +211,6 @@ PODS:
     - React-Core
   - react-native-slider (4.1.12):
     - React-Core
-  - react-native-track-player (2.1.2):
-    - React-Core
-    - SwiftAudioEx (= 0.14.5)
   - react-native-video (5.2.0):
     - React-Core
     - react-native-video/Video (= 5.2.0)
@@ -323,7 +320,6 @@ PODS:
     - React-RCTImage
   - RNVectorIcons (9.0.0):
     - React-Core
-  - SwiftAudioEx (0.14.5)
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -348,7 +344,6 @@ DEPENDENCIES:
   - react-native-maps (from `../node_modules/react-native-maps`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - "react-native-slider (from `../node_modules/@react-native-community/slider`)"
-  - react-native-track-player (from `../node_modules/react-native-track-player`)
   - react-native-video (from `../node_modules/react-native-video`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
@@ -373,7 +368,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - boost-for-react-native
-    - SwiftAudioEx
 
 EXTERNAL SOURCES:
   DoubleConversion:
@@ -414,8 +408,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-slider:
     :path: "../node_modules/@react-native-community/slider"
-  react-native-track-player:
-    :path: "../node_modules/react-native-track-player"
   react-native-video:
     :path: "../node_modules/react-native-video"
   React-perflogger:
@@ -478,7 +470,6 @@ SPEC CHECKSUMS:
   react-native-maps: a421fe6aeb74279597c4ea9598f25796108e2d89
   react-native-safe-area-context: 5cf05f49df9d17261e40e518481f2e334c6cd4b5
   react-native-slider: b0b4c575507df69bc8ceb307eaad0a8f89455a8e
-  react-native-track-player: d8b0b1bc35f224b6bb4256d3415306fc1e50e7c9
   react-native-video: 77ce22be7abff9e373527ca10106a99dea3ba56c
   React-perflogger: 9c547d8f06b9bf00cb447f2b75e8d7f19b7e02af
   React-RCTActionSheet: 3080b6e12e0e1a5b313c8c0050699b5c794a1b11
@@ -498,7 +489,6 @@ SPEC CHECKSUMS:
   RNReanimated: 024eff8202342abf4b24e11575a16afc441dabfe
   RNScreens: 4d79118be80f79fa1f4aa131909a1d6e86280af3
   RNVectorIcons: 4143ba35feebab8fdbe6bc43d1e776b393d47ac8
-  SwiftAudioEx: bfaff9894c885aded7edfb0793e25165d55053d4
   Yoga: 8c8436d4171c87504c648ae23b1d81242bdf3bbf
 
 PODFILE CHECKSUM: eea0f4d90b6dc3a83ecce17c6e114a6461c9f42c
