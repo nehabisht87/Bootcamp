@@ -128,6 +128,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 50,
     marginBottom: 18,
+    color: 'black',
   },
   Input: {
     paddingRight: 3,
