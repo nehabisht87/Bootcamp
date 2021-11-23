@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   View,
@@ -7,8 +7,11 @@ import {
   Text,
   StatusBar,
   Image,
+  Modal,
 } from 'react-native';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
+import Join from './Join';
+import SignIn from './SignIn';
 
 const DATA1 = [
   {
@@ -89,22 +92,25 @@ const Item2 = ({title}) => (
 const Account = () => {
   const renderItem = ({item}) => <Item title={item.title} />;
   const renderData = ({item}) => <Item2 title={item.title} />;
+  const [signInModal, setSignInModal] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerText}>Welcome!</Text>
-        <Image
-          source={require('../assets/AccountIcons/icons8-person-64.png')}
-          style={styles.imageText}
-        />
+        <TouchableOpacity>
+          <Image
+            source={require('../assets/AccountIcons/user.png')}
+            style={styles.imageText}
+          />
+        </TouchableOpacity>
       </View>
       <View style={styles.authContainer}>
-        <TouchableOpacity style={styles.auth}>
-          <Text>SIGN |</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.auth}>
-          <Text>JOIN</Text>
+        <TouchableOpacity
+          style={styles.auth1}
+          onPress={() => setModalVisible(true)}>
+          <Text>SIGN | JOIN</Text>
         </TouchableOpacity>
       </View>
       <ScrollView>
@@ -125,6 +131,29 @@ const Account = () => {
           />
         </View>
       </ScrollView>
+      {/* Modal */}
+      <Modal visible={modalVisible}>
+        <SafeAreaView style={styles.nav}>
+          <TouchableOpacity
+            style={styles.navBtn}
+            onPress={() => setSignInModal(true)}>
+            <Text style={styles.navText}>SignIn</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.navBtn}
+            onPress={() => setSignInModal(false)}>
+            <Text style={styles.navText}>Join</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.navBtn}
+            onPress={() => setModalVisible(false)}>
+            <Image
+              source={require('../assets/modalIcons/icons8-close-window-24.png')}
+            />
+          </TouchableOpacity>
+        </SafeAreaView>
+        {signInModal ? <SignIn /> : <Join />}
+      </Modal>
     </SafeAreaView>
   );
 };
@@ -152,7 +181,13 @@ const styles = StyleSheet.create({
     // marginBottom: 10,
     backgroundColor: 'white',
   },
-  auth: {
+  auth1: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginLeft: 20,
+    marginBottom: 10,
+  },
+  auth2: {
     fontSize: 18,
     fontWeight: 'bold',
     marginLeft: 20,
@@ -172,9 +207,16 @@ const styles = StyleSheet.create({
     marginTop: 14,
     marginBottom: 14,
   },
-  // list2:{
-
-  // }
+  nav: {
+    flexDirection: 'row',
+  },
+  navBtn: {
+    marginHorizontal: 50,
+  },
+  navText: {
+    fontSize: 22,
+    color: 'grey',
+  },
 });
 
 export default Account;
