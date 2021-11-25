@@ -16,7 +16,13 @@ const Home = () => {
   };
   return (
     <View style={styles.container}>
-      <Switch value={switchValue} onValueChange={toggle} />
+      <Switch 
+      value={switchValue} 
+      onValueChange={toggle} 
+      trackColor={{ false: "#767577", true: "#81b0ff" }}
+      thumbColor={[Platform.OS=='ios'?'#FFFFFF':'#ffffff']}
+   
+      />
       {switchValue ? (
         <View>
           <Slider
