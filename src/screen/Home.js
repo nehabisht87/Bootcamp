@@ -15,8 +15,8 @@ import MapView, {Callout, Marker} from 'react-native-maps';
 
 const Mapview = () => {
   const [pin, setPin] = useState({
-    latitude: 28.63714,
-    longitude: 77.33267,
+    latitude: 28.59343,
+    longitude: 77.30845,
   });
 
   return (
@@ -25,8 +25,8 @@ const Mapview = () => {
         <MapView
           style={styles.map}
           initialRegion={{
-            latitude: 28.63714,
-            longitude: 77.33267,
+            latitude: 28.59343,
+            longitude: 77.30845,
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421,
           }}
